@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全景图</title>
+    <link rel="stylesheet" href="./style/public.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="pano"></div>
+        <div class="scenario_img  scenario_imgOpen" v-if="showList">
+            <div class="imgBody {{ item.name == linkCurrent ? 'colorboder' : 'noneboder' }}" v-for="item in imgList"
+                @click="imgColor(item)">
+                <img :src="item.src" alt="" />
+            </div>
+        </div>
+        <!-- <div class="list_ui">
+            <div class="imageBody" v-for="item in listData">
+              <i :class="['iconfont',item.icon]"></i>
+            </div>
+          </div> -->
+    </div>
+</body>
+<script src="./js/vue.min.js"></script>
+<script src="./js/tour.js"></script>
+<script src="./js/data.js"></script>
+<script src="./js/index.js"></script>
+
+</html>
